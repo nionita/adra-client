@@ -25,7 +25,7 @@ const write = (api, value) => {
     })
     .catch(e => {
       console.log('Exception in fetch:', e)
-      return toString(e)
+      return `${e}`
     })
 }
 
@@ -54,7 +54,7 @@ const read = api => {
     })
     .catch(e => {
       console.log('Exception in fetch:', e)
-      const message = toString(e)
+      const message = `${e}`
       return { message, value }
     })
 }

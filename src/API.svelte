@@ -16,46 +16,31 @@
 </script>
 
 <div class="api">
-	<div class="title">
-		<h2>{api} API</h2>
-	</div>
-	<div class="text">
-		<div class="group">
-			<button on:click="{doRead}">Read</button>
-			<input type="text" id="block" bind:value="{value}">
-			<button on:click="{doWrite}">Write</button>
-		</div>
-		<div class="message">
-			<input type="text" id="message" disabled="true" value="{message}">
-		</div>
-	</div>
+	<h2>{api} API</h2>
+	<button on:click="{doRead}">Read</button>
+	<input type="text" id="block" bind:value="{value}">
+	<button on:click="{doWrite}">Write</button>
+	<input type="text" id="message" disabled="true" value="{message}">
 </div>
 
 <style>
-	h2 {
-		color: purple;
-	}
-
 	.api {
     margin: 2px;
-    padding: 2px;
+    padding: 0 2px;
     border: 1px solid rgb(200, 200, 200);
+		display: grid;
+		grid-gap: 3px;
+		grid-template-columns: 6em auto 6em;
+		grid-template-rows: repeat(3, 2.5em)
 	}
 
-	.group {
-		display: flex;
-	}
-
-	.text, .title {
-		width: 100%;
-		/* margin: auto; */
-	}
-
-	#block {
-		width: 80%;
+	h2 {
+		color: purple;
+		grid-column: 1 / -1;
+		margin: 0;
 	}
 
 	#message {
-		width: 100%;
+		grid-column: 1 / -1;
 	}
 </style>
