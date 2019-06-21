@@ -1,4 +1,4 @@
-const url_base = 'http://localhost:7200/api/'
+const url_base = 'https://localhost:7200/api/'
 
 const write = (api, value) => {
   console.log('Want to write', value)
